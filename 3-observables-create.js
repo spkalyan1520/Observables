@@ -11,7 +11,7 @@ var observer = {
     }
 }
 
-Rx.Observable.create(function(obs){ //Accepts an observer object on which next, error and setTimeout can be called
+Rx.Observable.create(function(obs){ //Accepts an observable object on which next, error and complete can be called
     //The way observers differ from promises is multiple events can be emitted at different times from the same observable
     //and the observers that subscribe to the next method will get the events as they are emitted
     setTimeout(function(){
